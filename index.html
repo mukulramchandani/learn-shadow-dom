@@ -57,9 +57,35 @@
       the thinking of the age about how the world and the Universe developed.
       Definitely an interesting read!
     </p>
+
+    <meaning-ful></meaning-ful>
   </body>
 
   <script>
     // Define web component for meaningful
+
+    class Meaningful extends HTMLElement {
+      constructor() {
+        super();
+
+        const shadowRoot = this.attachShadow({ mode: "open" });
+
+        // define shadow DOM and styles
+
+        // define selection
+
+        // show the banner if word is selected and handle visibility
+
+        // get the rects of the selected word
+      }
+
+      connectedCallback() {
+        // add listener
+      }
+
+      disconnectedCallback() {}
+    }
+
+    customElements.define("meaning-ful", Meaningful);
   </script>
 </html>
