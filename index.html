@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: #21262d;
+        padding: 30px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 16px;
+      }
+
+      .defaultElements {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-between;
+      }
+
+      .defaultElements > textarea::-webkit-input-placeholder {
+        color: blue;
+      }
+    </style>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Shadow DOM</title>
+  </head>
+  <body>
+    <div class="defaultElements">
+      <textarea placeholder="this text is in shadow DOM"></textarea>
+
+      <input type="file" />
+
+      <select>
+        <option value="B">A</option>
+        <option value="B">B</option>
+      </select>
+    </div>
+  </body>
+</html>
