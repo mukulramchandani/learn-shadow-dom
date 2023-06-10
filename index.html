@@ -33,6 +33,60 @@
         <option value="B">A</option>
         <option value="B">B</option>
       </select>
+
+      <my-button>
+        <span slot="title">title</span>
+      </my-button>
     </div>
+
+    <script>
+      class MyButton extends HTMLElement {
+        constructor() {
+          super();
+
+          const shadowRoot = this.attachShadow({ mode: "open" });
+
+          shadowRoot.innerHTML = `
+                <style>
+                    .initialState{
+                        width:130px;
+                        height:40px;
+                        display:flex;
+                        justify-content:center;
+                        border-radius:8px;
+                        background:azure;
+                        transition:background .3s linear;
+                        color:black;
+                        align-items:center;
+                        cursor:pointer;
+                    }
+
+                    .initialState:hover{
+                        background:lightgreen;
+                    }
+
+                    </style>
+
+
+                    <div class="initialState" >
+                        <slot name="title">
+                            button
+                            </slot>
+                    </div>
+
+                `;
+        }
+
+        connectedCallback() {
+          // mount
+        }
+
+        disconnectedCallback() {
+          // unmount
+        }
+      }
+
+      window.customElements.define("my-button", MyButton);
+    </script>
   </body>
 </html>
