@@ -1,5 +1,5 @@
 
-            shadowRoot.innerHTML = `
+        shadowRoot.innerHTML = `
         <style>
             .super{
                 display:flex;
@@ -17,8 +17,6 @@
                 z-index:999;
                 opacity:0;
                 padding:20px;
-                
-                
             }
 
             </style>
@@ -30,7 +28,7 @@
         `;
       
 
-    getWordMeaning = async (word) => {
+      getWordMeaning = async (word) => {
         this.shadowRoot.getElementById("meaningful").innerHTML =
           "<h6>Loading</h6>";
         fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
