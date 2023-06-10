@@ -30,7 +30,7 @@
         `;
       
 
-            getWordMeaning = async (word) => {
+    getWordMeaning = async (word) => {
         this.shadowRoot.getElementById("meaningful").innerHTML =
           "<h6>Loading</h6>";
         fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
